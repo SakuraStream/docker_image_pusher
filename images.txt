@@ -5,3 +5,4 @@
 # 支持指定架构
 # --platform=linux/arm64 xiaoyaliu/alist
 homeassistant/home-assistant:2024.7.4
+koishijs/koishi:v1.2.0-puppeteer
