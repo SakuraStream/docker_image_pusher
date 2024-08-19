@@ -6,3 +6,5 @@
 # --platform=linux/arm64 xiaoyaliu/alist
 homeassistant/home-assistant:2024.7.4
 koishijs/koishi:v1.2.0-puppeteer
+xiaoyaliu/alist:latest
+xhofe/alist-aria2:v3.36.0
