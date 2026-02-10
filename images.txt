@@ -4,6 +4,4 @@
 # xhofe/alist:latest
 # 支持指定架构
 # --platform=linux/arm64 xiaoyaliu/alist
-ollama/ollama:0.15.3
-n8nio/n8n:2.4.8
-ghcr.io/open-webui/open-webui:main
+koishijs/koishi:latest
