@@ -95,7 +95,7 @@ jobs:
             else
                 # 存镜像的命名空间
                 temp_map[$image_name]=$name_space
-            fi       
+            fi
         done < images.txt
         
         
@@ -139,6 +139,19 @@ jobs:
             # 将@sha256:等字符删除
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
+            
+            # 检查镜像是否已存在于阿里云仓库
+            echo "检查镜像是否已存在: $new_image"
+            if docker manifest inspect "$new_image" >/dev/null 2>&1; then
+                echo "✓ 镜像已存在于阿里云仓库，跳过: $new_image"
+                continue
+            else
+                echo "✗ 镜像不存在，开始下载和上传: $new_image"
+            fi
+
+            echo "docker pull $line"
+            docker pull $line
+            
             echo "docker tag $image $new_image"
             docker tag $image $new_image
             echo "docker push $new_image"
