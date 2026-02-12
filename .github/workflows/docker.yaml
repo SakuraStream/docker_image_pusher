@@ -140,7 +140,7 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
             
-            # 检查镜像是否已存在于阿里云仓库，且镜像版本不为 latest
+            # 检查镜像是否已存在于阿里云仓库
             # 解析 tag（如果未显式指定，则视为 latest）
             if [[ "$image_name_tag" == *:* ]]; then
               tag="${image_name_tag##*:}"
@@ -152,7 +152,7 @@ jobs:
               echo "✓ 镜像已存在于阿里云仓库，跳过: $new_image"
               continue
             else
-              echo "✗ 镜像不存在或为 latest，开始下载和上传: $new_image"
+                echo "✗ 镜像不存在，开始下载和上传: $new_image"
             fi
 
             echo "docker pull $line"
