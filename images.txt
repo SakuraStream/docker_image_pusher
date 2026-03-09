@@ -6,3 +6,4 @@
 # --platform=linux/arm64 xiaoyaliu/alist
 nginx:1.28.2
 nginx:latest
+ollama/ollama:0.17.7
