@@ -7,3 +7,4 @@
 nginx:1.28.2
 nginx:latest
 ollama/ollama:0.17.7
+n8nio/n8n:2.11.2
