@@ -10,3 +10,8 @@ ollama/ollama:0.17.7
 n8nio/n8n:2.11.2
 l429609201/misaka_danmu_server:v2.6.1
 logvar/danmu-api:1.17.5
+deluan/navidrome:0.60.3
+superng6/qbittorrentee:5.1.3.10
+rustfs/rustfs:1.0.0-alpha.89
+gotson/komga:1.24.1
+cloudreve/cloudreve:4.15.0
