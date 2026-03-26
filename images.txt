@@ -6,7 +6,7 @@
 # --platform=linux/arm64 xiaoyaliu/alist
 nginx:1.28.2
 nginx:latest
-ollama/ollama:0.17.7
+ollama/ollama:0.18.3
 n8nio/n8n:2.11.2
 l429609201/misaka_danmu_server:v2.6.1
 logvar/danmu-api:1.17.5
